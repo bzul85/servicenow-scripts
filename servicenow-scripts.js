@@ -15,6 +15,14 @@ if(gr.next()) {
    gr.update();
 }
 
+// CHANGE STATE IN CHANGE REQUEST 
+var gr = new GlideRecord('change_request');
+gr.addQuery('number', 'CHG0042583');
+gr.query();
+if(gr.next()) {
+   gr.state = '308';          //308 CANCELLED
+   gr.update();
+}
 
 // UPDATE CHANGE TASK
 var gr = new GlideRecord('change_task');

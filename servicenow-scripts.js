@@ -20,7 +20,7 @@ var gr = new GlideRecord('change_request');
 gr.addQuery('number', 'CHG0042583');
 gr.query();
 if(gr.next()) {
-   gr.state = '308';          //308 CANCELLED
+   gr.state = '308';          //308 CANCELLED, 307 - closed
    gr.update();
 }
 
